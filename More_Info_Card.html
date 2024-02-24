@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="css/style00.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    /* background: #18191a; */
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.row{
+    width: 90%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px 20px;
+    padding: 6rem 0;
+}
+@media (max-width: 991px) {
+    .row{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 575px) {
+    .row{
+        grid-template-columns: 1fr;
+    }
+}
+.card{
+    position: relative;
+    height: 400px;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.9);
+    transform: scale(0.85);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition: 0.3s ease;
+}
+.card:hover{
+    background-position: right;
+    transform: scale(1);
+}
+.card .contentWrapper{
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.7)
+    );
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: #fff;
+    opacity: 0;
+}
+.card:hover .contentWrapper{
+    opacity: 1;
+}
+.contentWrapper .content{
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+.card:hover .contentWrapper .content{
+    width: 100%;
+}
+.contentWrapper .content h3{
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+.contentWrapper .content p{
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+.contentWrapper .content a{
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 10px 25px;
+}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="card" style="background-image: url(https://images.unsplash.com/photo-1669844777296-7319443f0e30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);">
+            <div class="contentWrapper">
+                <div class="content">
+                    <h3>Card Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, dolorem explicabo distinctio voluptates ab ipsum sit aut reiciendis commodi ex?</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-image: url(https://images.unsplash.com/photo-1670142059296-0ca2713f9ada?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);">
+            <div class="contentWrapper">
+                <div class="content">
+                    <h3>Card Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, dolorem explicabo distinctio voluptates ab ipsum sit aut reiciendis commodi ex?</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-image: url(https://images.unsplash.com/photo-1670231162299-9020d1ff6f9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1372&q=80);">
+            <div class="contentWrapper">
+                <div class="content">
+                    <h3>Card Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, dolorem explicabo distinctio voluptates ab ipsum sit aut reiciendis commodi ex?</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-image: url(https://images.unsplash.com/photo-1670157110936-39955c309bc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80);">
+            <div class="contentWrapper">
+                <div class="content">
+                    <h3>Card Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, dolorem explicabo distinctio voluptates ab ipsum sit aut reiciendis commodi ex?</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

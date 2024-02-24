@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        .wapper {
+            max-width: 102%;
+            position: relative;
+            padding: 0 15px;
+
+        }
+
+        .wapper i {
+            /* position: absolute; */
+            position: relative;
+            top: 50%;
+            height: 46px;
+            font: 1.2rem;
+            width: 46px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 46px;
+            background: rgba(78, 76, 76, 0.2);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .wapper i:first-child {
+            left: 8px;
+            display: none;
+            top: 224px;
+        }
+
+        .wapper i:last-child {
+            /* right: -3px; */
+            right: -96%;
+            top: -162px;
+        }
+
+        .wapper .carousel {
+            white-space: nowrap;
+            font-size: 0;
+            cursor: pointer;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .carousel .dragging {
+            cursor: grab;
+            scroll-behavior: auto;
+
+        }
+
+        .carousel .dragging img {
+            pointer-events: none;
+        }
+
+        .carousel img {
+            height: 340px;
+            object-fit: cover;
+            width: calc(100% /4);
+            margin-left: 14px;
+        }
+
+        .carousel img:first-child {
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+
+        @media screen and (max-width: 76.313rem) {
+            .fa-angle-right {
+                right: 25px;
+
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+
+        @media screen and (max-width: 23.438rem) {
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:51.25rem) {
+            .wapper i:last-child {
+                right: -94%;
+
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 57rem) {
+            .carousel img {
+                width: calc(100% /3);
+            }
+
+            .wapper i:last-child {
+                right: -94%;
+
+            }
+        }
+
+        @media screen and (max-width: 33.75rem) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            .wapper i:last-child {
+                right: -92%;
+
+            }
+        }
+
+        @media screen and (max-width: 17.5rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -81%;
+
+            }
+        }
+
+        @media screen and (max-width: 25.75rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -87%;
+
+            }
+        }
+
+        @media screen and (max-width: 64rem) {
+            .carousel img {
+                width: calc(100% /3);
+            }
+
+            .wapper i:last-child {
+                right: -95%;
+
+            }
+        }
+
+        @media screen and (max-width: 22.5rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+        @media screen and (max-width: 24rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+        @media screen and (max-width: 40rem) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            .wapper i:last-child {
+                right: -92%;
+
+            }
+        }
+
+        @media screen and (max-width: 40rem) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            .wapper i:last-child {
+                right: -92%;
+
+            }
+        }
+
+        @media screen and (max-width: 24rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -87%;
+
+            }
+        }
+
+        @media screen and (max-width: 25.75rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -87%;
+
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel">
+            <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSdzyejS_dO8xbyl3vXcSN3D3dpPkDmM9jO7zXyjWbdYdIYY5cJuaH5OBQ-GHeOe4VT"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMAceZO02DH_ArU-VcvqIzAoE6Co5tYmYaFsvKe=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNjk2YGoN3NKOKYb8z_yZazxizIsgJ_SS3uKsqD=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMVI54Sv-6cckg4juuKyqmiscyFk0fYuOpAtd1J=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOXDzOWfd90onvNNhCVghiBXVaDW2g5Lg9mkx5l=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipM0vcXqKem6gIX_uGq8273_4rNNjnaeGMBZmW6F=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNjb3kMv3B-6YQ2QZKseKCDJtZI4Xxqu0OYx18-=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMlLa5BnMOPieqkLJRPmQG6TyoWw6rgH8L3zJbJ=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNXUEwOaIvRg1nJZcDDx_5rOEe7zKOMwmeDi1rL=s680-w680-h510"
+                alt="img" draggable="false">
+
+
+
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+
+    </div>
+    <script>
+        //CODE FOR PICTURE_SLIDER
+
+
+        const carousel = document.querySelector(".carousel"),
+            firstImg = carousel.querySelectorAll("img")[0];
+        arrowIcons = document.querySelectorAll(".wapper i");
+
+        //script for arrow icons 
+        arrowIcons.forEach(icon => {
+            icon.addEventListener("click", () => {
+                let firstImgWidth = firstImg.clientWidth + 14; //get first img width & add 14margin value 
+                //if check icon is left reduce width value from the carouselscroll left else add to eat
+                carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth
+                setTimeout(() => showHideIcons(), 60) //call hidden icon in 60ms
+            });
+        });
+
+        //Script for auto slider for image
+
+        const autoSlide = () => {
+
+            if (carousel.scrollLeft == (carousel.scrolWidth - carousel.clientWidth)) return;
+            // get different value  that needs to add and reduce carousel left to take middel img center
+            positionDiff = Math.abs(positionDiff);
+            let firstImgWidth = firstImg.clientWidth + 14;
+            let valDifference = firstImgWidth - positionDiff
+            if (carousel.scrollLeft > prevScrolleft) {
+                //logic for this line 
+                // return carousel.scrollLeft += positionDiff > firstImgWidth /3 ? valDifference : - positionDiff // scroling to the right 
+
+                //  if you didn't understand ternary if else 
+                // you can write like this too. Both do same
+
+                //  if(positionDiff > firstImgWidth / 3)
+                //   {
+                //      carousel.scrollLeft += valDifference; 
+                //     }
+                //      else {
+                //         carousel.scrollLeft positionDiff ;
+                //     }
+
+
+                return carousel.scrollLeft += positionDiff > firstImgWidth / 4 ? valDifference : - positionDiff // scroling to the right 
+            }
+            carousel.scrollLeft -= positionDiff > firstImgWidth / 4 ? valDifference : - positionDiff // scroling to left
+
+
+        }
+
+
+
+        // //  if you didn't understand ternary if else 
+        // // you can write like this too. Both do same
+
+        // //  if(positionDiff > firstImgWidth / 3)
+        // //   {
+        // //      carousel.scrollLeft += valDifference; 
+        // //     }
+        // //      else {
+        // //         carousel.scrollLeft positionDiff ;
+        // //     }
+
+
+
+        // const showHideIcons = () => {
+        //     //showing to the hidden icon accoding to carousl scroll left value
+        //     let scrollWidth = carousel.scrollWidth - carousel.clientWidth; //get max scroll bar width 
+        //     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block"
+        //     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block"
+
+        // }
+
+        let isDragStart = false, isDragging = false, prevPageX, prevScrolleft, positionDiff;
+        const dragStart = (e) => {
+            // update the globel variables value on mouse down event    
+            isDragStart = true;
+            prevPageX = e.pageX || e.touches[0].pageX;
+            prevScrolleft = carousel.scrollLeft;
+        }
+
+        const dragging = (e) => {
+            // scroll images /carousel to left accoding to mouse pointer 
+            if (!isDragStart) return;
+            e.preventDefault();
+            isDragging = true;
+            carousel.classList.add("dragging")
+            //scrollLeft return the nunber of pixel an element content scroll horizontel
+            // pageX return the horizontel cooridinate of mouse while
+            positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+            carousel.scrollLeft = prevScrolleft - positionDiff;
+            showHideIcons()
+        }
+
+        const dragStop = () => {
+            isDragStart = false;
+            carousel.classList.remove("dragging")
+            if (isDragging) return;
+            isDragging = false;
+            autoSlide();
+
+        }
+
+        carousel.addEventListener("mousedown", dragStart)
+        carousel.addEventListener("touchstart", dragStart)
+
+
+        carousel.addEventListener("mousemove", dragging)
+        carousel.addEventListener("touchmove", dragging)
+
+
+        carousel.addEventListener("mouseup", dragStop)
+        carousel.addEventListener("mouseleave", dragStop)
+        carousel.addEventListener("touchend", dragStop)
+    </script>
+
+    </script>
+</body>
+</html>

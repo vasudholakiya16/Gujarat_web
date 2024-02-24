@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-image: url("https://i.pinimg.com/564x/dd/37/c4/dd37c45b6d96e6b15059049edb5bbfff.jpg");
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* position: sticky; */
+            top: 0;
+            cursor: pointer;
+            color: #24262b;
+            background-color: rgb(201, 155, 5);
+
+
+
+        }
+
+        .nav-list {
+            width: 65%;
+            /* background: pink; */
+            display: flex;
+            align-items: center
+        }
+
+        .Logo {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 19px 28px;
+
+
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: rgb(22, 22, 22);
+
+        }
+
+        .nav-list li a:hover {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .right-nav {
+            /* background: greenyellow; */
+            width: 30%;
+            text-align: end;
+        }
+
+        h4:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        .background {
+            background: rgb(255, 153, 0);
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .first_section {
+            height: 0vh;
+        }
+
+        #search {
+            padding: 5px;
+            font-size: 15px;
+            border: 2px solid black;
+            border-radius: 9px;
+        }
+
+        .btn-sn {
+            padding: 3px 10px;
+            vertical-align: middle;
+        }
+
+        .burger {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 15px;
+        }
+
+        .line {
+            width: 33px;
+            background-color: black;
+            height: 4px;
+            margin: 6px 3px;
+        }
+
+        @media screen and (max-width: 1361px) {
+            .nav-list {
+                flex-direction: column;
+            }
+
+            .navbar {
+                height: 400px;
+                flex-direction: column;
+                transition: all 0.9s ease-out;
+            }
+
+            .right-nav {
+                text-align: center;
+            }
+
+            #search {
+                width: 100%;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .h-nav-resp {
+                height: 72px;
+            }
+
+            .v-class-resp {
+                opacity: 0;
+            }
+
+        }
+
+        @media screen and (max-width: 769px) {
+            .Logo {
+                width: 69%;
+            }
+        }
+
+        /* ===========================================
+                                    CODE FOR slide_Bar
+                                ======================================= */
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            position: relative;
+            background: #aad5f6;
+        }
+
+        .slide-1 {
+            background: url('https://c1.wallpaperflare.com/preview/630/189/101/kutch-festival-rann-of-kutch-festival-kutch-tourism.jpg');
+        }
+
+        .slide-2 {
+            background: url('https://www.outlookindia.com/outlooktraveller//public/uploads/articles/explore/featured-ahmedabad-2.jpg');
+        }
+
+        .slide-3 {
+            background: url('https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,h_600,q_auto,w_auto/v1/filestore/vduma9yodexxd323s8e5mbdo6eni_1585055811_shutterstock_1051436459.jpg');
+        }
+
+        .slide {
+            width: 100%;
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .caption {
+            background: rgba(0, 0, 0, 0.03);
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 40px 0px;
+        }
+
+        .caption h3 {
+            color: #fff;
+            text-align: center;
+            top: 50px;
+            font-size: 50px;
+            padding: 18px;
+        }
+
+        .caption p {
+            max-width: 600px;
+            width: 90%;
+            margin: 0px auto;
+            color: #ccc;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5em;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 100;
+            /* background: rgba(0, 0, 0, .1); */
+            border-radius: 50%;
+            transform: background 500ms;
+        }
+
+        .arrow img {
+            width: 50px;
+        }
+
+        /* .arrow:hover {
+            background: rgba(0, 0, 0, .4);
+        } */
+
+        .l {
+            left: 0;
+        }
+
+        .r {
+            right: 0;
+        }
+
+        @media (max-width: 35em) {
+            img {
+                height: 100%;
+            }
+
+            .caption h3 {
+                height: 100%;
+            }
+
+            .caption h3 p {
+                height: 100%;
+            }
+
+        }
+
+        /* ===========================================
+                                    Introduction to kutch 
+                                ======================================= */
+
+        h1 {
+            text-transform: none;
+            text-align: center;
+            top: 50px;
+            font-size: 42px;
+            padding: 18px;
+
+        }
+
+        .content {
+            display: flex;
+            position: relative;
+            width: 90%;
+            height: 42%;
+            /* background: #fff; */
+            border-radius: 39px;
+            font-family: arial;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            transition: 1s box-shadow;
+            cursor: pointer;
+            margin: 25px;
+            font-size: 1.3rem;
+            text-align: justify;
+            left: 3%;
+        }
+
+        /* Below 560px  */
+        @media (max-width: 35em) {
+            .content {
+                padding: 0 1.3rem;
+                width: 90%;
+            }
+
+            .p {
+                padding: 1.2rem;
+            }
+        }
+
+        /* ===========================================
+                                   css for intro to distance road,air,walk
+                                ======================================= */
+
+
+        #services {
+            margin: 0%;
+            display: flex;
+            height: 50%;
+        }
+
+        #services .box {
+            cursor: pointer;
+            /* border: 4px solid #ffbb00; */
+            padding: 0%;
+            margin: 0.2%;
+            border-radius: 10px;
+            /* background-color: #fdde54; */
+            left: 20%;
+            font-size: 1.1rem;
+            text-align: justify;
+            padding: 2%;
+            background-image: url("https://i.pinimg.com/564x/79/3d/d1/793dd19d01679c7cd3a30dd821d5c8fc.jpg");
+            margin: 1%;
+        }
+
+        #services .box img {
+            height: 110px;
+            display: block;
+            margin: auto
+        }
+
+        #services.box p {
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        @media (max-width: 62em) {
+            #services {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 35em) {
+            #services {
+                flex-direction: column;
+            }
+
+            @media (max-width: 31.875rem) {
+                #services {
+                    flex-direction: column;
+                }
+
+                #services img {
+                    width: 100%;
+                }
+            }
+
+        }
+
+
+        @media (max-width: 25.875rem) {
+            #services {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            #services img {
+                width: 100%;
+            }
+        }
+
+
+        @media (max-width: 23.75rem) {
+            #services {
+                flex-direction: column;
+                width: 100%;
+                padding: 20px;
+            }
+
+            #services img {
+                width: 101%;
+            }
+        }
+
+        @media (max-width: 51.25rem) {
+            #services {
+                flex-direction: column;
+                width: 100%;
+                padding: 20px;
+            }
+
+            #services img {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 57rem) {
+            #services {
+                flex-direction: column;
+                width: 100%;
+                padding: 20px;
+            }
+
+            #services img {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 17.5rem) {
+            #services {
+                flex-direction: column;
+                /* width: 100%; */
+                padding: 20px;
+                /* height: 40%; */
+            }
+
+            #services .box {
+                height: 40%;
+            }
+
+            #services img {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 20rem) {
+            #services {
+                flex-direction: column;
+                /* width: 100%; */
+                padding: 20px;
+                /* height: 40%; */
+            }
+
+            #services .box {
+                height: 40%;
+            }
+
+            #services img {
+                width: 50%;
+            }
+        }
+
+
+
+
+
+
+        /* css for a slider  */
+
+
+
+        .wapper {
+            max-width: 102%;
+            position: relative;
+            padding: 0 15px;
+
+        }
+
+        .wapper i {
+            /* position: absolute; */
+            position: relative;
+            top: 50%;
+            height: 46px;
+            font: 1.2rem;
+            width: 46px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 46px;
+            background: rgba(78, 76, 76, 0.2);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .wapper i:first-child {
+            left: 8px;
+            display: none;
+            top: 224px;
+        }
+
+        .wapper i:last-child {
+            /* right: -3px; */
+            right: -96%;
+            top: -162px;
+        }
+
+        .wapper .carousel {
+            white-space: nowrap;
+            font-size: 0;
+            cursor: pointer;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .carousel .dragging {
+            cursor: grab;
+            scroll-behavior: auto;
+
+        }
+
+        .carousel .dragging img {
+            pointer-events: none;
+        }
+
+        .carousel img {
+            height: 340px;
+            object-fit: cover;
+            width: calc(100% /4);
+            margin-left: 14px;
+        }
+
+        .carousel img:first-child {
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+
+        @media screen and (max-width: 76.313rem) {
+            .fa-angle-right {
+                right: 25px;
+
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+
+        @media screen and (max-width: 23.438rem) {
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:51.25rem) {
+            .wapper i:last-child {
+                right: -94%;
+
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 57rem) {
+            .carousel img {
+                width: calc(100% /3);
+            }
+
+            .wapper i:last-child {
+                right: -94%;
+
+            }
+        }
+
+        @media screen and (max-width: 33.75rem) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            .wapper i:last-child {
+                right: -92%;
+
+            }
+        }
+
+        @media screen and (max-width: 17.5rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -81%;
+
+            }
+        }
+
+        @media screen and (max-width: 25.75rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -87%;
+
+            }
+        }
+
+        @media screen and (max-width: 64rem) {
+            .carousel img {
+                width: calc(100% /3);
+            }
+
+            .wapper i:last-child {
+                right: -95%;
+
+            }
+        }
+
+        @media screen and (max-width: 22.5rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+        @media screen and (max-width: 24rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -88%;
+
+            }
+        }
+
+        @media screen and (max-width: 40rem) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            .wapper i:last-child {
+                right: -92%;
+
+            }
+        }
+
+        @media screen and (max-width: 40rem) {
+            .carousel img {
+                width: calc(100% /2);
+            }
+
+            .wapper i:last-child {
+                right: -92%;
+
+            }
+        }
+
+        @media screen and (max-width: 24rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -87%;
+
+            }
+        }
+
+        @media screen and (max-width: 25.75rem) {
+            .carousel img {
+                width: calc(100% /1);
+            }
+
+            .wapper i:last-child {
+                right: -87%;
+
+            }
+        }
+
+
+
+
+
+        /* ===========================================
+                                              CODE FOR POPULAR PLACES
+                                 ======================================= */
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* background: #18191a; */
+
+            /* place-items: center; */
+        }
+
+        .row {
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            width: 100%;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px 20px;
+            padding: 1rem 0;
+        }
+
+        .card {
+            position: relative;
+            height: 400px;
+            min-height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 30px 40px rgba(0, 0, 0, 0.9);
+            transform: scale(0.85);
+            background-size: cover;
+            background-position: left;
+            background-repeat: no-repeat;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            background-position: right;
+            transform: scale(1);
+        }
+
+        .card .contentWrapper {
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            background: linear-gradient(45deg,
+                    rgba(0, 0, 0, 1),
+                    rgba(0, 0, 0, 0.7));
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            color: #fff;
+            opacity: 0;
+        }
+
+        .card:hover .contentWrapper {
+            opacity: 1;
+        }
+
+        .contentWrapper .content_1 {
+            width: 0;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .card:hover .contentWrapper .content_1 {
+            width: 100%;
+        }
+
+        .contentWrapper .content_1 h3 {
+            font-size: 24px;
+            padding-bottom: 15px;
+        }
+
+        .contentWrapper .content_1 p {
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 20px;
+        }
+
+        .contentWrapper .content_1 a {
+            display: inline-block;
+            text-transform: capitalize;
+            text-decoration: none;
+            color: #000;
+            background: #fff;
+            font-size: 16px;
+            border-radius: 50px;
+            padding: 10px 25px;
+        }
+
+        @media (max-width: 991px) {
+            .row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 575px) {
+            .row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 76.313rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+
+        @media screen and (max-width: 23.438rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:51.25rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 57rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 33.75rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 17.5rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 25.75rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 64rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 22.5rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 24rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 40rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 40rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 24rem) {
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 25.75rem) {
+            .card img {
+                width: 100%;
+            }
+
+        }
+
+
+
+        /* ===========================================
+                                              CODE FOR FOOTER
+                                 ======================================= */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container_1 {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row_1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /* responsive */
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="Logo">
+                <H4> GUJARAT પરિભ્રમણ</H4>
+            </div>
+            <li><a href="">HOME</a></li>
+            <li><a href="">VADODARA </a></li>
+            <li><a href="">KUTCH</a></li>
+            <li><a href="">AHMEDABAD</a></li>
+            <li><a href="">JUNAGADH</a></li>
+        </ul>
+        <div class="right-nav v-class-resp ">
+            <input type="text" class="search" id="search">
+            <button class="btn-sn">search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+
+
+        </div>
+    </nav>
+    <section class="background first_section">
+        </div>
+    </section>
+    <!-- /* ===========================================
+                                              CODE FOR MAIN_SLIDER
+                                 ======================================= */ -->
+    <div class="container">
+        <div class="arrow l" onclick="prev()">
+            <img src="https://img.icons8.com/ios-filled/512/less-than-2.png"
+                alt="l">
+        </div>
+
+        <div class="slide slide-1">
+            <div class="caption">
+                <h3>Kutch</h3>
+                <p>kutch festival, rann of kutch festival, kutch tourism, night</p>
+            </div>
+        </div>
+
+        <div class="slide slide-2">
+            <div class="caption">
+                <h3>Kutch</h3>
+                <p>Sunset at the Little Rann of Kutch</p>
+            </div>
+        </div>
+
+        <div class="slide slide-3">
+            <div class="caption">
+                <h3>Kutch</h3>
+                <p>Thank you, Bahar Dar!</p>
+            </div>
+        </div>
+        <div class="arrow r" onclick="next()">
+            <img src="https://img.icons8.com/ios-filled/2x/more-than-2.png"
+                alt="r">
+        </div>
+    </div>
+    <!-- ======================================== 
+                                     Introduction to kutch  
+                            ========================================  -->
+    <h1>Introduction</h1>
+    <div class="content">
+        <p>
+        <table> Kutch district is a district of Gujarat state in western India, with its headquarters (capital) at Bhuj.
+            Covering an area of 45,674 km2 it is the largest district of India. The area of Kutch District is larger
+            than the
+            entire area of states like Haryana (44,212 km2) and Kerala (38,863 km2) The population of Kutch is about
+            2,092,371. It has 10 talukas, 939 villages and 6 municipalities. The Kutch district is home to the Kutchi
+            people
+            who speak the Kutchi language. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nostrum, eum
+            animi
+            tenetur et alias quasi qui delectus cum consectetur nesciunt a dicta in numquam. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Pariatur, nulla. Maxime ad, possimus, unde ullam aliquam accusamus sunt libero
+            aliquid maiores impedit, fugiat amet quam. Consequatur accusamus, nobis debitis delectus doloribus esse
+            maiores
+            animi alias. Porro nam earum nulla saepe temporibus magni quos? Quia nobis velit quisquam maxime mollitia!
+            Quasi
+            eaque dolorum nesciunt fuga sit, soluta itaque deleniti! abc
+
+            </p>
+        </table>
+    </div>
+    <!-- ======================================== 
+                                     code for location 
+                            ========================================  -->
+
+    <section class="services-container">
+        <!-- <h1 class="h-Primary center">Our Services</h1> -->
+        <div id="services">
+            <div class="box">
+                <img src="https://pic.onlinewebfonts.com/svg/img_522063.png" alt="">
+                <h2 class="h-Secondary"></h2>
+                <h2 class="h-Secondary center">Use Road</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quas, possimus voluptate
+                    aliquid
+                    sint quibusdam, quos soluta voluptatibus iusto ad iste qui accusantium ea maiores excepturi dolor
+                    perferendis
+                    et dolorem distinctio doloribus cumque eos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Vitae
+                    possimus reiciendis ducimus! Minima, laboriosam perferendis!
+                </p>
+
+            </div>
+
+            <div class="box">
+                <img src="https://pngimg.com/uploads/trian/small/trian_PNG16660.png" alt="">
+                <h2 class="h-Secondary"></h2>
+                <h2 class="h-Secondary center">Use Train</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quas, possimus voluptate
+                    aliquid
+                    sint quibusdam, quos soluta voluptatibus iusto ad iste qui accusantium ea maiores excepturi dolor
+                    perferendis
+                    et dolorem distinctio doloribus cumque eos! Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Maiores
+                    quia atque iusto ipsum, dolorem eaque.</p>
+
+            </div>
+
+
+            <div class="box">
+                <img src="https://hdclipartall.com/images/airplane-clipart-transparent-air-plane-clipart-800_416.png"
+                    alt="">
+                <h2 class="h-Secondary"></h2>
+                <h2 class="h-Secondary center">Use Airplane</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quas, possimus voluptate
+                    aliquid
+                    sint quibusdam, quos soluta voluptatibus iusto ad iste qui accusantium ea maiores excepturi dolor
+                    perferendis
+                    et dolorem distinctio doloribus cumque eos! Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Maiores
+                    quia atque iusto ipsum, dolorem eaque.</p>
+
+            </div>
+
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <!-- /* ===========================================
+                                              CODE FOR PICTURE_SLIDER
+                                 ======================================= */ -->
+    <div class="wapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel">
+            <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSdzyejS_dO8xbyl3vXcSN3D3dpPkDmM9jO7zXyjWbdYdIYY5cJuaH5OBQ-GHeOe4VT"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMAceZO02DH_ArU-VcvqIzAoE6Co5tYmYaFsvKe=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNjk2YGoN3NKOKYb8z_yZazxizIsgJ_SS3uKsqD=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMVI54Sv-6cckg4juuKyqmiscyFk0fYuOpAtd1J=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOXDzOWfd90onvNNhCVghiBXVaDW2g5Lg9mkx5l=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipM0vcXqKem6gIX_uGq8273_4rNNjnaeGMBZmW6F=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNjb3kMv3B-6YQ2QZKseKCDJtZI4Xxqu0OYx18-=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMlLa5BnMOPieqkLJRPmQG6TyoWw6rgH8L3zJbJ=s680-w680-h510"
+                alt="img" draggable="false">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNXUEwOaIvRg1nJZcDDx_5rOEe7zKOMwmeDi1rL=s680-w680-h510"
+                alt="img" draggable="false">
+
+
+
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+
+    </div>
+
+    <!-- /* ===========================================
+                                              CODE FOR POPULAR PLACES
+                                 ======================================= */ -->
+    <div class="row">
+        <div class="card"
+            style="background-image: url(https://i.pinimg.com/564x/7b/46/3e/7b463e5b329a83148833c4a003526ee0.jpg);">
+            <div class="contentWrapper">
+                <div class="content_1">
+                    <h3>Dholavira</h3>
+                    <p>Dholavira is an archaeological site at Khadirbet in Bhachau Taluka of Kutch
+                        District, in the state of Gujarat in western India, which has taken its name from a modern-day
+                        village 1 kilometre south of it. This village is 165 km from Radhanpur. Also
+                        known locally as Kotada timba, the site contains ruins of a city of the ancient Indus Valley
+                        civilization.</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="card"
+            style="background-image: url(https://i.pinimg.com/564x/3a/78/3c/3a783c7d787dd83770ddddcfb15e863e.jpg);">
+            <div class="contentWrapper">
+                <div class="content_1">
+                    <h3>Mata No Madh</h3>
+                    <p>Mata no Madh is a village in Lakhpat Taluka of Kutch district, Gujarat, India. The village lies
+                        surrounded by hills on both banks of a small stream and has a temple dedicated to Ashapura Mata,
+                        the household deity of former Jadeja rulers of kutch State. She is also considered patron deity
+                        of Kutch.</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="card"
+            style="background-image: url(https://pbs.twimg.com/media/EybzX5mW8AE_WrK?format=jpg&name=900x900);">
+            <div class="contentWrapper">
+                <div class="content_1">
+                    <h3>Aadiyogi , Kutch</h3>
+                    <p>At a distance of 25 km from Bhuj Railway Station, Kera Shiva Temple is an old Hindu temple
+                        situated in Kera village near Bhuj city in Gujarat. Also known as Lakheshwara temple of Kerakot,
+                        it is one of the ancient temples in Kutch and among the popular Bhuj Tourist Places.</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="card"
+            style="background-image: url(https://i.pinimg.com/564x/23/05/0b/23050b9280ba81cc905b37d5b13520bf.jpg);">
+            <div class="contentWrapper">
+                <div class="content_1">
+                    <h3>White Rann</h3>
+                    <p>The Great Rann of Kutch (or Rann of Kutch seasonal salt marsh) is a salt marsh in the Thar Desert
+                        in the Kutch District of Gujarat, India. It is about 7500 km2 (2900 sq miles) in area and is
+                        reputed to be one of the largest salt deserts in the world.</p>
+                    <a href="#">See More...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /* ===========================================
+                                              CODE FOR FOOTER
+                                 ======================================= */ -->
+
+    <footer class="footer">
+        <div class="container_1">
+            <div class="row_1">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ======================================== 
+                                    Our JavaScript Section Start  
+                            ========================================  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+    <!-- <script src="js/js2.js"></script> -->
+
+
+    <!--1. script for nav bar  -->
+    <script>
+        burger = document.querySelector('.burger')
+        navbar = document.querySelector('.navbar')
+        navlist = document.querySelector('.nav-list')
+        rightnav = document.querySelector('.right-nav')
+
+        burger.addEventListener('click', () => {
+            rightnav.classList.toggle('v-class-resp')
+            navlist.classList.toggle('v-class-resp')
+            navbar.classList.toggle('h-nav-resp')
+
+
+        }) 
+    </script>
+    <!-- 2. script for slide bar -->
+
+    <script>
+        let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls() {
+            for (let i = 0; i < slide.length; i++) {
+                slide[i].style.display = 'none';
+            }
+        }
+
+        function next() {
+            cls();
+            if (current === slide.length - 1) current = -1;
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+                x += 0.1;
+                slide[current].style.opacity = x;
+                if (x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function prev() {
+            cls();
+            if (current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+                x += 0.1;
+                slide[current].style.opacity = x;
+                if (x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function start() {
+            cls();
+            slide[current].style.display = 'block';
+        }
+        start();
+    </script>
+    <script>
+        //CODE FOR PICTURE_SLIDER
+
+
+        const carousel = document.querySelector(".carousel"),
+            firstImg = carousel.querySelectorAll("img")[0];
+        arrowIcons = document.querySelectorAll(".wapper i");
+
+        //script for arrow icons 
+        arrowIcons.forEach(icon => {
+            icon.addEventListener("click", () => {
+                let firstImgWidth = firstImg.clientWidth + 14; //get first img width & add 14margin value 
+                //if check icon is left reduce width value from the carouselscroll left else add to eat
+                carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth
+                setTimeout(() => showHideIcons(), 60) //call hidden icon in 60ms
+            });
+        });
+
+        //Script for auto slider for image
+
+        const autoSlide = () => {
+
+            if (carousel.scrollLeft == (carousel.scrolWidth - carousel.clientWidth)) return;
+            // get different value  that needs to add and reduce carousel left to take middel img center
+            positionDiff = Math.abs(positionDiff);
+            let firstImgWidth = firstImg.clientWidth + 14;
+            let valDifference = firstImgWidth - positionDiff
+            if (carousel.scrollLeft > prevScrolleft) {
+                //logic for this line 
+                // return carousel.scrollLeft += positionDiff > firstImgWidth /3 ? valDifference : - positionDiff // scroling to the right 
+
+                //  if you didn't understand ternary if else 
+                // you can write like this too. Both do same
+
+                //  if(positionDiff > firstImgWidth / 3)
+                //   {
+                //      carousel.scrollLeft += valDifference; 
+                //     }
+                //      else {
+                //         carousel.scrollLeft positionDiff ;
+                //     }
+
+
+                return carousel.scrollLeft += positionDiff > firstImgWidth / 4 ? valDifference : - positionDiff // scroling to the right 
+            }
+            carousel.scrollLeft -= positionDiff > firstImgWidth / 4 ? valDifference : - positionDiff // scroling to left
+
+
+        }
+
+
+
+        // //  if you didn't understand ternary if else 
+        // // you can write like this too. Both do same
+
+        // //  if(positionDiff > firstImgWidth / 3)
+        // //   {
+        // //      carousel.scrollLeft += valDifference; 
+        // //     }
+        // //      else {
+        // //         carousel.scrollLeft positionDiff ;
+        // //     }
+
+
+
+        const showHideIcons = () => {
+            //showing to the hidden icon accoding to carousl scroll left value
+            let scrollWidth = carousel.scrollWidth - carousel.clientWidth; //get max scroll bar width 
+            arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block"
+            arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block"
+
+        }
+
+        let isDragStart = false, isDragging = false, prevPageX, prevScrolleft, positionDiff;
+        const dragStart = (e) => {
+            // update the globel variables value on mouse down event    
+            isDragStart = true;
+            prevPageX = e.pageX || e.touches[0].pageX;
+            prevScrolleft = carousel.scrollLeft;
+        }
+
+        const dragging = (e) => {
+            // scroll images /carousel to left accoding to mouse pointer 
+            if (!isDragStart) return;
+            e.preventDefault();
+            isDragging = true;
+            carousel.classList.add("dragging")
+            //scrollLeft return the nunber of pixel an element content scroll horizontel
+            // pageX return the horizontel cooridinate of mouse while
+            positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+            carousel.scrollLeft = prevScrolleft - positionDiff;
+            showHideIcons()
+        }
+
+        const dragStop = () => {
+            isDragStart = false;
+            carousel.classList.remove("dragging")
+            if (isDragging) return;
+            isDragging = false;
+            autoSlide();
+
+        }
+
+        carousel.addEventListener("mousedown", dragStart)
+        carousel.addEventListener("touchstart", dragStart)
+
+
+        carousel.addEventListener("mousemove", dragging)
+        carousel.addEventListener("touchmove", dragging)
+
+
+        carousel.addEventListener("mouseup", dragStop)
+        carousel.addEventListener("mouseleave", dragStop)
+        carousel.addEventListener("touchend", dragStop)
+    </script>
+
+
+</body>
+
+</html>

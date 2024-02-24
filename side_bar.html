@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            position: relative;
+            background: #aad5f6;
+        }
+
+        .slide-1 {
+            background: url('https://c1.wallpaperflare.com/preview/630/189/101/kutch-festival-rann-of-kutch-festival-kutch-tourism.jpg');
+        }
+
+        .slide-2 {
+            background: url('https://www.outlookindia.com/outlooktraveller//public/uploads/articles/explore/featured-ahmedabad-2.jpg');
+        }
+
+        .slide-3 {
+            background: url('https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,h_600,q_auto,w_auto/v1/filestore/vduma9yodexxd323s8e5mbdo6eni_1585055811_shutterstock_1051436459.jpg');
+        }
+
+        .slide {
+            width: 100%;
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .caption {
+            background: rgba(0, 0, 0, 0.03);
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 40px 0px;
+        }
+
+        .caption h3 {
+            color: #fff;
+            text-align: center;
+            top: 50px;
+            font-size: 50px;
+            padding: 18px;
+        }
+
+        .caption p {
+            max-width: 600px;
+            width: 90%;
+            margin: 0px auto;
+            color: #ccc;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5em;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 100;
+            /* background: rgba(0, 0, 0, .1); */
+            border-radius: 50%;
+            transform: background 500ms;
+        }
+
+        .arrow img {
+            width: 50px;
+        }
+
+        /* .arrow:hover {
+            background: rgba(0, 0, 0, .4);
+        } */
+
+        .l {
+            left: 0;
+        }
+
+        .r {
+            right: 0;
+        }
+
+        @media (max-width: 35em) {
+            img {
+                height: 100%;
+            }
+
+            .caption h3 {
+                height: 100%;
+            }
+
+            .caption h3 p {
+                height: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="arrow l" onclick="prev()">
+            <img src="https://img.icons8.com/ios-filled/512/less-than-2.png"
+                alt="l">
+        </div>
+
+        <div class="slide slide-1">
+            <div class="caption">
+                <h3>Kutch</h3>
+                <p>kutch festival, rann of kutch festival, kutch tourism, night</p>
+            </div>
+        </div>
+
+        <div class="slide slide-2">
+            <div class="caption">
+                <h3>Kutch</h3>
+                <p>Sunset at the Little Rann of Kutch</p>
+            </div>
+        </div>
+
+        <div class="slide slide-3">
+            <div class="caption">
+                <h3>Kutch</h3>
+                <p>Thank you, Bahar Dar!</p>
+            </div>
+        </div>
+        <div class="arrow r" onclick="next()">
+            <img src="https://img.icons8.com/ios-filled/2x/more-than-2.png"
+                alt="r">
+        </div>
+    </div>
+    <script>
+        let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls() {
+            for (let i = 0; i < slide.length; i++) {
+                slide[i].style.display = 'none';
+            }
+        }
+
+        function next() {
+            cls();
+            if (current === slide.length - 1) current = -1;
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+                x += 0.1;
+                slide[current].style.opacity = x;
+                if (x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function prev() {
+            cls();
+            if (current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+                x += 0.1;
+                slide[current].style.opacity = x;
+                if (x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function start() {
+            cls();
+            slide[current].style.display = 'block';
+        }
+        start();
+    </script>
+</body>
+</html>

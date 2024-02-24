@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: azure;
+        }
+        .card{
+            position: relative;
+            background-color: #fff;
+            border-radius: 20px;
+            height: 545px;
+            width: 320px;
+            box-shadow: 0 5px 10px rgba(0, 0,0, 0.1);
+           
+        }
+        
+        .card .card-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            position: relative;
+            z-index: 100;
+        }
+        section .card .image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+          
+    
+        }
+     .image img{
+            height: 271px;
+            width: 261px;
+            object-fit: cover;
+            border-radius: 20px;
+            /* border: 3px solid blue; */
+            /* padding: 65px 1px; */
+        }
+        .box-1{
+            position: absolute;
+            width: 320px;
+            height: 545px;
+            border-radius: 20px 20px 20px 20px;
+            background: url('https://i.pinimg.com/736x/71/6d/a1/716da13200bb37ccf777d541f7d08002.jpg ');
+           
+        }
+
+        /*                                      code for titel                    */
+       .card .name-profession{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        }
+         .name-profession .name{
+            position: absolute;
+            top: 308px;
+            left: 88px;
+            font-size: 40px;
+            font-weight: bolder;
+            color: white;
+            cursor: pointer;
+        }
+         .name::after {
+        content: '';
+        height: 3px;
+        width: 0%;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+        }
+        .name:hover::after {
+            width: 100%;
+        }
+        section .card .about{
+            /* font-size: 20px; */
+            display: flex;
+            text-align: center;
+            justify-content: start;
+            color: #fff;
+            margin-top: 55px;
+
+        }
+        .card .button{
+                /* width: 100%; */
+                display: flex;
+                margin-top: 20px;
+        }
+        .card .button button{
+            border-radius: 20px;
+            /* color: #fff; */
+            padding: 8px 22px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: all 0.3sec ease;
+            cursor:  pointer;
+        }
+        .card .button button:hover{
+            opacity: 0.8;
+        }
+        /* .card .button {
+            width: 134px;
+    padding: 7px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(138, 197, 218);
+    background: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: -1px;
+    overflow: hidden;
+        }
+
+
+        .card .button .span {
+            background: rgb(138, 197, 218);
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            width: 100%;
+        }
+
+        .button:hover {
+            border: none;
+        } */
+
+        
+    
+    </style>
+</head>
+<body>
+    <section>
+        <div class="swiper mySwiper container">
+            <div class="swiper-wrapper content">
+                <!-- for card-1  -->
+                <div class="swiper-slider card">
+                    <div class="box-1"></div>
+                    <div class="card-content">
+                        <div class="image">
+                            <img src="https://i.pinimg.com/236x/cb/f7/8f/cbf78fbee9fc7ad9bd1d9347d5450d8d.jpg" alt="">
+                        </div>
+                        <div class="name-profession">
+                            <span class="name">KUTCH</span>
+                        </div>
+                        <div class="about">
+                            <p>Kutch district is a district of Gujarat state in western India, with its headquarters at Bhuj.
+                                 Covering an area of 45,674 km², 
+                                 it is the largest district of India.</p>
+                        </div>
+                        <div class="button b1">
+                            <span></span>
+                            <button class="mroinfo">
+                                <a href="#">mroinfo</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- for card-2  -->
+                <div class="swiper-slider card">
+                    <div class="box-2"></div>
+                    <div class="card-content">
+                        <div class="image">
+                            <img src="https://i.pinimg.com/474x/50/c8/f3/50c8f3a8e04f231de1202170dcdb74ec.jpg" alt="">
+                        </div>
+                        <div class="name-profession">
+                            <span class="name">KUTCH</span>
+                        </div>
+                        <div class="about">
+                            <p>Kutch district is a district of Gujarat state in western India, with its headquarters at Bhuj.
+                                 Covering an area of 45,674 km², 
+                                 it is the largest district of India.</p>
+                        </div>
+                        <div class="button b1">
+                            <span></span>
+                            <button class="mroinfo">
+                                <a href="#">mroinfo</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- for card-3  -->
+                <div class="swiper-slider card">
+                    <div class="box-3"></div>
+                    <div class="card-content">
+                        <div class="image">
+                            <img src="https://i.pinimg.com/236x/cb/f7/8f/cbf78fbee9fc7ad9bd1d9347d5450d8d.jpg" alt="">
+                        </div>
+                        <div class="name-profession">
+                            <span class="name">KUTCH</span>
+                        </div>
+                        <div class="about">
+                            <p>Kutch district is a district of Gujarat state in western India, with its headquarters at Bhuj.
+                                 Covering an area of 45,674 km², 
+                                 it is the largest district of India.</p>
+                        </div>
+                        <div class="button b1">
+                            <span></span>
+                            <button class="mroinfo">
+                                <a href="#">mroinfo</a>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
